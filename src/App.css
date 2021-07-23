@@ -12,14 +12,19 @@
   --breakpoint-1: 650px;
   --breakpoint-2: 1200px;
   --card-size: 250px;
-  --header-height: 10vh;
+  --bottom-margin: 0 0 15px 0;
+  --bigger-margin: 0 0 30px 0;
+  --box-shadow: 4px 4px 8px 0px #18182133;
+  --box-shadow-top: 0 0 8px 0px #18182133;
+  --box-shadow-inset: inset 0px 1px 4px 1px #181821;
+  --default-radius: 8px;
   --border-radius: 8px;
 }
 
 /* --- Base --- */
 
 body {
-font-family: var(--body-font);
+  font-family: var(--body-font);
 }
 
 a {
@@ -32,7 +37,6 @@ a {
   display: flex;
   padding: 0 1em;
   min-height: 5em;
-  max-width: var(--breakpoint-2);
   margin: 0 auto;
 }
 
@@ -43,7 +47,6 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0 1em;
-  max-width: var(--breakpoint-2);
   margin: 0 auto;
 }
 
@@ -64,3 +67,18 @@ a {
   margin: 0 auto;
   padding: 0 1em;
 }
+
+/* --- Todo App --- */
+
+.container-todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1em;
+  padding: 0 1em;
+  max-width: var(--breakpoint-2);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+.button-todo {}

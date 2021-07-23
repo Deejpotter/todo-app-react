@@ -7,7 +7,7 @@ function Header(props) {
     <header>
       <Container>
         <Link to='/'>
-          <h1>React Calculator</h1>
+          <h1>Todo app</h1>
         </Link>
       </Container>
     </header>

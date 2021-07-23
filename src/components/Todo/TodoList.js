@@ -1,10 +1,11 @@
 import React from "react"
+import Container from "../Util/Container"
 
-function TodoList(props) {
+function TodoList() {
   return (
-    <div>
-
-    </div>
+    <Container ext='col'>
+      
+    </Container>
   )
 }
 

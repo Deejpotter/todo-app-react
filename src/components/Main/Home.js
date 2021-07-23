@@ -5,7 +5,7 @@ import Container from "../Util/Container"
 function Home(props) {
 	return (
 		<main>
-			<Container>
+			<Container ext='col'>
 				<h2>Home</h2>
 				<Todo />
 			</Container>
