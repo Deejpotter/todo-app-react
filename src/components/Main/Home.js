@@ -1,4 +1,5 @@
 import React from "react"
+import Todo from "../Todo/Todo"
 import Container from "../Util/Container"
 
 function Home(props) {
@@ -6,7 +7,7 @@ function Home(props) {
 		<main>
 			<Container>
 				<h2>Home</h2>
-				
+				<Todo />
 			</Container>
 		</main>
 	)
