@@ -1,11 +1,10 @@
 import React from "react"
 import Container from "../Util/Container"
 
-function TodoHeader({ clickHandler }) {
+function TodoHeader() {
   return (
     <Container>
-      <h2>ToDo</h2>
-      <button onClick={clickHandler}>+</button>
+      <h2>ToDos</h2>
     </Container>
   )
 }

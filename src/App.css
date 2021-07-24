@@ -23,6 +23,10 @@
 
 /* --- Base --- */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: var(--body-font);
 }
@@ -35,28 +39,25 @@ a {
 
 .container {
   display: flex;
-  padding: 0 1em;
-  min-height: 5em;
-  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .container {
+    max-width: var(--breakpoint-2);
+  }
 }
 
 .container-center {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 1em;
-  margin: 0 auto;
 }
 
 @media (min-width: 700px) {
   .container-center {
-    max-width: var(--breakpoint-1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    max-width: var(--breakpoint-2);
   }
 }
 
@@ -65,7 +66,6 @@ a {
   flex-direction: column;
   max-width: var(--breakpoint-2);
   margin: 0 auto;
-  padding: 0 1em;
 }
 
 /* --- Todo App --- */
@@ -73,12 +73,32 @@ a {
 .container-todo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 1em;
-  padding: 0 1em;
-  max-width: var(--breakpoint-2);
+  width: 100%;
+  padding: 1em;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
 }
 
-.button-todo {}
+@media (min-width: 700px) {
+  .container-todo {
+    max-width: var(--breakpoint-1);
+  }
+}
+
+
+/* --- Todo Item --- */
+
+.container-todo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+@media (min-width: 700px) {
+  .container-todo {
+    max-width: var(--breakpoint-1);
+  }
+}
