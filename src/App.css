@@ -29,6 +29,7 @@
 
 body {
   font-family: var(--body-font);
+  font-size: 1.1rem;
 }
 
 a {
@@ -68,13 +69,35 @@ a {
   margin: 0 auto;
 }
 
+@media (min-width: 700px) {
+  .container-col {
+    max-width: var(--breakpoint-2);
+  }
+}
+
+
+/* --- Footer --- */
+
+.container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .container-footer {
+    max-width: var(--breakpoint-2);
+  }
+}
+
+
 /* --- Todo App --- */
 
 .container-todo {
   display: flex;
   flex-direction: column;
-  width: 100%;
   padding: 1em;
+  margin: 0 .5em;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
 }
@@ -85,20 +108,84 @@ a {
   }
 }
 
+.container-todo h2 {
+  margin: 0;
+}
 
-/* --- Todo Item --- */
+/* -- Header -- */
 
-.container-todo {
+.container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .container-header {
+    max-width: var(--breakpoint-2);
+  }
+}
+
+/* -- Form -- */
+
+.container-form {
+  display: flex;
+  padding: .5rem;
+}
+
+@media (min-width: 700px) {
+  .container-form {
+    max-width: var(--breakpoint-2);
+  }
+}
+
+.container-form form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: .5rem 0;
+  margin: 0;
+}
+
+.container-form form input {
+  font-size: 1.1rem;
+  flex-grow: 1;
+}
+
+/* -- List -- */
+
+.container-list {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 1em;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
+  justify-content: stretch;
 }
 
 @media (min-width: 700px) {
-  .container-todo {
-    max-width: var(--breakpoint-1);
+  .container-list {
+    max-width: var(--breakpoint-2);
   }
+}
+
+/* -- Item -- */
+
+.container-item {
+  display: flex;
+}
+
+@media (min-width: 700px) {
+  .container-item {
+    max-width: var(--breakpoint-2);
+  }
+}
+
+.container-item p {
+  flex-grow: 1;
+  padding-right: .5rem;
+  overflow-wrap: anywhere;
+}
+
+.container-item button {
+  box-sizing: 1rem;
+  border: 0;
+  background: 0;
 }

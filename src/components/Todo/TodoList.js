@@ -4,7 +4,8 @@ import TodoItem from "./TodoItem"
 
 function TodoList({ todoItems, removeItem }) {
   return (
-    <Container ext='col'>
+    <Container ext='list'>
+      <p><strong>Items:</strong></p>
       {todoItems.map((item, index) => {
         return <TodoItem key={index} index={index} item={item} removeItem={removeItem} />
       }) }

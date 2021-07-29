@@ -3,7 +3,7 @@ import Container from "../Util/Container"
 
 function TodoHeader() {
   return (
-    <Container>
+    <Container ext='header'>
       <h2>ToDos</h2>
     </Container>
   )

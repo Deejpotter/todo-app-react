@@ -6,7 +6,9 @@ function Home(props) {
 	return (
 		<main>
 			<Container ext='col'>
-				<h2>Home</h2>
+				<Container ext='header'>
+					<h2>Home</h2>
+				</Container>
 				<Todo />
 			</Container>
 		</main>

@@ -5,7 +5,7 @@ import Container from "../Util/Container"
 function Header(props) {
   return (
     <header>
-      <Container>
+      <Container ext='header'>
         <Link to='/'>
           <h1>Todo app</h1>
         </Link>

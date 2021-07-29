@@ -12,7 +12,7 @@ function TodoForm({ addItem }) {
     };
 
     return (
-        <Container>
+        <Container ext='form'>
             <form onSubmit={handleSubmit}>
                 <input type="text" value={value} onChange={e => setValue(e.target.value)} />
                 <input type="submit" value='+' />
