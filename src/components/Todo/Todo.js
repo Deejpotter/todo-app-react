@@ -20,7 +20,7 @@ function Todo() {
   }
 
   return (
-    <Container ext='todo'>
+    <Container ext='todo shadow radius'>
       <TodoHeader />
       <TodoForm addItem={addItem} />
       <TodoList todoItems={todoItems} removeItem={removeItem} />

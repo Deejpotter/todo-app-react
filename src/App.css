@@ -1,12 +1,12 @@
 /* --- Variables --- */
 
 :root {
-  --main: #26BF66;
-  --light-accent: #59B7CC;
-  --dark-accent: #7A616C;
-  --light: #F4EFF2;
-  --dark: #181821;
-  --dark-trans: #18182199;
+  --main: #25BB64;
+  --light-accent: #73C2D4;
+  --dark-accent: #513D47;
+  --light: #FCFAFB;
+  --dark: #08080C;
+  --dark-trans: #08080c70;
   --heading-font: 'Knewave', serif;
   --body-font: 'Oxygen', sans-serif;
   --breakpoint-1: 650px;
@@ -14,9 +14,9 @@
   --card-size: 250px;
   --bottom-margin: 0 0 15px 0;
   --bigger-margin: 0 0 30px 0;
-  --box-shadow: 4px 4px 8px 0px #18182133;
-  --box-shadow-top: 0 0 8px 0px #18182133;
-  --box-shadow-inset: inset 0px 1px 4px 1px #181821;
+  --box-shadow: 4px 8px 16px 0px var(--dark-trans);
+  --box-shadow-top: 0 0 8px 0px var(--dark-trans);
+  --box-shadow-inset: inset 0px 1px 4px 1px var(--dark-trans);
   --default-radius: 8px;
   --border-radius: 8px;
 }
@@ -28,11 +28,14 @@
 }
 
 body {
+  background-color: var(--light);
+  color: var(--dark);
   font-family: var(--body-font);
   font-size: 1.1rem;
 }
 
 a {
+  color: var(--main);
   text-decoration: none;
 }
 
@@ -75,6 +78,13 @@ a {
   }
 }
 
+.shadow {
+  box-shadow: var(--box-shadow);
+}
+
+.radius {
+  border-radius: var(--border-radius);
+}
 
 /* --- Footer --- */
 
@@ -90,16 +100,14 @@ a {
   }
 }
 
-
 /* --- Todo App --- */
 
 .container-todo {
   display: flex;
   flex-direction: column;
+  background-color: var(--main);
   padding: 1em;
   margin: 0 .5em;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
 }
 
 @media (min-width: 700px) {
