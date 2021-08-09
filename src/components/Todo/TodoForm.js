@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 import Container from "../Util/Container"
 
-function TodoForm({ addItem }) {
+function TodoForm({ dispatch }) {
     const [value, setValue] = useState("");
 
     const handleSubmit = e => {
         e.preventDefault();
         if (!value) return;
-        addItem(value);
+        dispatch({type: 'add'});
         setValue("");
     };
 
