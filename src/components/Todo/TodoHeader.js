@@ -1,12 +1,13 @@
-import React from "react"
-import Container from "../Util/Container"
+import React from "react";
+import Container from "../Util/Container";
 
-function TodoHeader() {
+function TodoHeader({ state }) {
   return (
-    <Container ext='header'>
-      <h2>ToDos</h2>
+    <Container ext='col'>
+      <h2>Hi {state.username}!</h2>
+      <p>Here are your items</p>
     </Container>
-  )
+  );
 }
 
-export default TodoHeader
+export default TodoHeader;

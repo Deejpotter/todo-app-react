@@ -3,11 +3,11 @@ import { FaTrash } from "react-icons/fa"
 
 import Container from "../Util/Container"
 
-function TodoItem({ index, item, removeItem }) {
+function TodoItem({ index, item, dispatch }) {
     return (
         <Container ext='item'>
             <p>{item}</p>
-            <button onClick={() => removeItem(index)}><FaTrash/></button>
+            <button onClick={() => dispatch({type: 'remove', index: index})}><FaTrash/></button>
         </Container>
     )
 }
