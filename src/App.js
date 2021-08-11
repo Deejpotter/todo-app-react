@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
@@ -7,10 +7,14 @@ import Header from './components/Header/Header';
 import Titlescreen from './components/Titlescreen/Titlescreen';
 import Todo from './components/Todo/Todo';
 
-const initialState = {
-  username: '',
-  items: []
-};
+// Reducer functions
+const initialState = localStorage.getItem('appState') ?
+  JSON.parse(localStorage.getItem('appState'))
+  :
+  {
+    username: '',
+    items: []
+  };
 
 function reducer(state, action) {
   switch (action.type) {
@@ -36,9 +40,18 @@ function reducer(state, action) {
   }
 }
 
+// Effect functions
+function saveState(state) {
+  localStorage.setItem('appState', JSON.stringify(state));
+}
+
 function App() {
 
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    saveState(state);
+  }, [state]);
 
   return (
     <BrowserRouter>
