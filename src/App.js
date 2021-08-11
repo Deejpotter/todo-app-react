@@ -40,17 +40,12 @@ function reducer(state, action) {
   }
 }
 
-// Effect functions
-function saveState(state) {
-  localStorage.setItem('appState', JSON.stringify(state));
-}
-
 function App() {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    saveState(state);
+    localStorage.setItem('appState', JSON.stringify(state));
   }, [state]);
 
   return (
