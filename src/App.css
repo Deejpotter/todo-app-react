@@ -1,4 +1,4 @@
-/* --- Variables --- */
+/* ----- Variables ----- */
 
 :root {
   --main: #25BB64;
@@ -21,7 +21,7 @@
   --border-radius: 8px;
 }
 
-/* --- Base --- */
+/* ----- Base ----- */
 
 * {
   box-sizing: border-box;
@@ -31,7 +31,7 @@ body {
   background-color: var(--light);
   color: var(--dark);
   font-family: var(--body-font);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 a {
@@ -39,7 +39,7 @@ a {
   text-decoration: none;
 }
 
-/* --- Util --- */
+/* ----- Util ----- */
 
 .container {
   display: flex;
@@ -86,7 +86,7 @@ a {
   border-radius: var(--border-radius);
 }
 
-/* --- Footer --- */
+/* ----- Footer ----- */
 
 .container-footer {
   display: flex;
@@ -100,12 +100,13 @@ a {
   }
 }
 
-/* --- Todo App --- */
+/* ----- Todo App ----- */
 
 .container-todo {
   display: flex;
   flex-direction: column;
   background-color: var(--main);
+  min-height: 50vh;
   padding: 1em;
   margin: 0 .5em;
 }
@@ -118,6 +119,10 @@ a {
 
 .container-todo h2 {
   margin: 0;
+}
+
+.container-todo p {
+  margin: .2em 0;
 }
 
 /* -- Header -- */
@@ -138,7 +143,7 @@ a {
 
 .container-form {
   display: flex;
-  padding: .5rem;
+  padding: .5rem 0;
 }
 
 @media (min-width: 700px) {
@@ -187,13 +192,13 @@ a {
 }
 
 .container-item p {
+  font-size: 1.1rem;
   flex-grow: 1;
   padding-right: .5rem;
   overflow-wrap: anywhere;
 }
 
 .container-item button {
-  box-sizing: 1rem;
   border: 0;
   background: 0;
 }
