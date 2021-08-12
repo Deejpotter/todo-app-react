@@ -35,6 +35,11 @@ function reducer(state, action) {
         username: action.username,
         items: state.items
       };
+    case 'deleteEverything':
+      return {
+        username: '',
+        items: []
+      };
     default:
       throw new Error("Not an action");
   }
@@ -60,7 +65,7 @@ function App() {
           }
         </Route>
       </Switch>
-      <Footer />
+      <Footer state={state} dispatch={dispatch} />
     </BrowserRouter>
   );
 }

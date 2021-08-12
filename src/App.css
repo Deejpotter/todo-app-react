@@ -92,12 +92,20 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 0;
 }
 
 @media (min-width: 700px) {
   .container-footer {
     max-width: var(--breakpoint-2);
   }
+}
+
+.container-footer button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: lightcoral;
+  color: var(--dark);
 }
 
 /* ----- Todo App ----- */

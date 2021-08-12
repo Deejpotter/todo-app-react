@@ -1,14 +1,20 @@
-import React from "react"
-import Container from "../Util/Container"
+import React from "react";
+import Container from "../Util/Container";
 
-function Footer(props) {
+function Footer({ state, dispatch }) {
   return (
-      <footer>
-          <Container ext='footer'>
-              <h3>Footer area</h3>
-          </Container>
-     </footer>
-  )
+    <footer>
+      <Container ext='footer'>
+        {state.username ?
+          <button className='shadow radius' onClick={() => dispatch({ type: 'deleteEverything' })}>
+            Delete everything
+          </button>
+          :
+          <p>Footer</p>
+        }
+      </Container>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
