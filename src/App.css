@@ -68,8 +68,6 @@ a {
 .container-col {
   display: flex;
   flex-direction: column;
-  max-width: var(--breakpoint-2);
-  margin: 0 auto;
 }
 
 @media (min-width: 700px) {
@@ -122,6 +120,7 @@ a {
 @media (min-width: 700px) {
   .container-todo {
     max-width: var(--breakpoint-1);
+    margin: 0 auto;
   }
 }
 
@@ -168,9 +167,16 @@ a {
   margin: 0;
 }
 
-.container-form form input {
+.container-form form input:first-child {
   font-size: 1.1rem;
   flex-grow: 1;
+  max-width: 90%;
+}
+
+@media (min-width: 300px) {
+  .container-form form input:first-child {
+    max-width: 100%;
+  }
 }
 
 /* -- List -- */
