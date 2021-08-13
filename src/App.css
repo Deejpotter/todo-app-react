@@ -1,4 +1,4 @@
-/* ----- Variables ----- */
+/* ---------- Variables ---------- */
 
 :root {
   --main: #25BB64;
@@ -7,6 +7,7 @@
   --light: #FCFAFB;
   --dark: #08080C;
   --dark-trans: #08080c70;
+  --red: lightcoral;
   --heading-font: 'Knewave', serif;
   --body-font: 'Oxygen', sans-serif;
   --breakpoint-1: 650px;
@@ -21,7 +22,7 @@
   --border-radius: 8px;
 }
 
-/* ----- Base ----- */
+/* ---------- Base ---------- */
 
 * {
   box-sizing: border-box;
@@ -39,7 +40,7 @@ a {
   text-decoration: none;
 }
 
-/* ----- Util ----- */
+/* ---------- Util ---------- */
 
 .container {
   display: flex;
@@ -84,7 +85,11 @@ a {
   border-radius: var(--border-radius);
 }
 
-/* ----- Footer ----- */
+.red {
+  background-color: lightcoral;
+}
+
+/* ---------- Footer ---------- */
 
 .container-footer {
   display: flex;
@@ -102,11 +107,10 @@ a {
 .container-footer button {
   font-size: 1.1rem;
   font-weight: 600;
-  background-color: lightcoral;
   color: var(--dark);
 }
 
-/* ----- Todo App ----- */
+/* ---------- Todo App ---------- */
 
 .container-todo {
   display: flex;
@@ -132,7 +136,7 @@ a {
   margin: .2em 0;
 }
 
-/* -- Header -- */
+/* ----- Header ----- */
 
 .container-header {
   display: flex;
@@ -146,7 +150,7 @@ a {
   }
 }
 
-/* -- Form -- */
+/* ----- Form ----- */
 
 .container-form {
   display: flex;
@@ -170,16 +174,18 @@ a {
 .container-form form input:first-child {
   font-size: 1.1rem;
   flex-grow: 1;
+  /* Change max width to stretch the whole way on big screens */
   max-width: 90%;
 }
 
 @media (min-width: 300px) {
   .container-form form input:first-child {
+    /* Change max width to stretch the whole way on big screens */
     max-width: 100%;
   }
 }
 
-/* -- List -- */
+/* ----- List ----- */
 
 .container-list {
   display: flex;
@@ -193,7 +199,7 @@ a {
   }
 }
 
-/* -- Item -- */
+/* ----- Item ----- */
 
 .container-item {
   display: flex;
@@ -215,4 +221,48 @@ a {
 .container-item button {
   border: 0;
   background: 0;
+}
+
+/* ---------- Modal ---------- */
+
+.container-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+/* ---------- Modal ---------- */
+
+.container-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-trans);
+}
+
+.modal-footer {
+  padding: 1em;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 90%;
+  padding: 1rem;
+  background-color: var(--light);
+  font-size: 1.1rem;
+}
+
+.modal-content button {
+  width: fit-content;
+  margin: 1em;
 }

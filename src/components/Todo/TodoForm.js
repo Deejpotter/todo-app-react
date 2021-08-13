@@ -14,7 +14,7 @@ function TodoForm({ state, dispatch }) {
     return (
         <Container ext='form'>
             <form onSubmit={handleSubmit}>
-                <input type="text" value={value} onChange={e => setValue(e.target.value)} placeholder='Add a new item' />
+                <input autoFocus type="text" value={value} onChange={e => setValue(e.target.value)} placeholder='Add a new item' />
                 <input type="submit" value='+' />
             </form>
         </Container>

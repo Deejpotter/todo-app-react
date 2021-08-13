@@ -11,10 +11,11 @@ function Titlescreen({ dispatch }) {
     setValue("");
   };
   return (
-    <Container ext='center'>
+    <Container ext='title'>
       <form onSubmit={handleSubmit}>
         <h2>Please enter your username</h2>
-        <input type="text" value={value} onChange={e => setValue(e.target.value)} />
+        <p>Create a username to start using the app.</p>
+        <input autoFocus type="text" value={value} onChange={e => setValue(e.target.value)} />
         <input type="submit" value="Set Username" />
       </form>
     </Container>
